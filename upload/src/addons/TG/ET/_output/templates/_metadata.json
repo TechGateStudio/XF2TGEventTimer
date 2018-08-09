@@ -1,0 +1,17 @@
+{
+    "admin/tg_et_helper_date_edit.html": {
+        "version_id": 1010470,
+        "version_string": "1.1.4",
+        "hash": "7b0fa1d3641d465e7f84f30123161646"
+    },
+    "admin/widget_def_options_et_event_timer.html": {
+        "version_id": 1010470,
+        "version_string": "1.1.4",
+        "hash": "19bba2015444a7aaf8442577b284ff22"
+    },
+    "public/widget_tg_et_eventTimer.html": {
+        "version_id": 1010470,
+        "version_string": "1.1.4",
+        "hash": "3a5e93dd6c0f9393a4aa5e64f1bb8e51"
+    }
+}

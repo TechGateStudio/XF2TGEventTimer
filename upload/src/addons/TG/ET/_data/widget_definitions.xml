@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget_definitions>
+  <widget_definition definition_id="et_event_timer" definition_class="\TG\ET\Widget\EventTimer"/>
+</widget_definitions>

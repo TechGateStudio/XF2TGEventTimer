@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language title="Russian (RU)" date_format="j M Y" time_format="H:i" currency_format="&quot;{value}&quot; {symbol}" week_start="1" decimal_point="." thousands_separator="," label_separator=":" comma_separator=", " ellipsis="..." parenthesis_open="(" parenthesis_close=")" language_code="ru-RU" text_direction="LTR" addon_id="TG/ET" export_version="2">
+  <phrase title="tg_et_background_color" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Фоновый цвет]]></phrase>
+  <phrase title="tg_et_background_image" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Фоновое изображение]]></phrase>
+  <phrase title="tg_et_background_image_explain" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[URL адрес изображения.]]></phrase>
+  <phrase title="tg_et_end_event_message" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Сообщение окончания события]]></phrase>
+  <phrase title="tg_et_end_event_message_explain" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Выводится вместо таймера после окончания события (Можно использовать HTML).]]></phrase>
+  <phrase title="tg_et_event_description" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Описание события]]></phrase>
+  <phrase title="tg_et_event_description_explain" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Сообщение выводимое над таймером (Можно использовать HTML).]]></phrase>
+  <phrase title="tg_et_event_end" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Дата окончания события]]></phrase>
+  <phrase title="tg_et_event_start" addon_id="TG/ET" version_id="1010170" version_string="1.1.1"><![CDATA[Дата начала события]]></phrase>
+  <phrase title="tg_et_hide_desc_end_event" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Скрыть описание по окончанию события]]></phrase>
+  <phrase title="tg_et_hide_end_event" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Скрыть виджет по окончанию события через X секунд]]></phrase>
+  <phrase title="tg_et_hour" addon_id="TG/ET" version_id="1010170" version_string="1.1.1"><![CDATA[Час]]></phrase>
+  <phrase title="tg_et_main_options" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Основные настройки]]></phrase>
+  <phrase title="tg_et_minute" addon_id="TG/ET" version_id="1010170" version_string="1.1.1"><![CDATA[Минута]]></phrase>
+  <phrase title="tg_et_not_view_next_user_group" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Не будет выводится следующим группам пользователей]]></phrase>
+  <phrase title="tg_et_not_view_next_users" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Не будет выводится следующим пользователям]]></phrase>
+  <phrase title="tg_et_style_options" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Настройки стиля]]></phrase>
+  <phrase title="tg_et_timer_color" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Цвет таймера]]></phrase>
+  <phrase title="tg_et_timer_num_color" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Цвет цифр таймера]]></phrase>
+  <phrase title="tg_et_timer_style_one" addon_id="TG/ET" version_id="1010170" version_string="1.1.1"><![CDATA[Стиль 1 (Строка)]]></phrase>
+  <phrase title="tg_et_timer_style_two" addon_id="TG/ET" version_id="1010170" version_string="1.1.1"><![CDATA[Стиль 2 (Столбик)]]></phrase>
+  <phrase title="tg_et_timer_styles" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Стиль таймера]]></phrase>
+  <phrase title="tg_et_view_next_user_group" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Будет выводится следующим группам пользователей]]></phrase>
+  <phrase title="tg_et_view_next_users" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Будет выводится следующим пользователям]]></phrase>
+  <phrase title="tg_et_view_options" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Настройки отображения]]></phrase>
+  <phrase title="widget_def.et_event_timer" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[Таймер событий]]></phrase>
+  <phrase title="widget_def_desc.et_event_timer" addon_id="TG/ET" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+</language>

@@ -1,0 +1,29 @@
+<xf:css src="widget_tg_et_eventTimer.less" />
+
+<div class="block">
+	<div class="block-container">
+		<div class="block-body et" 
+			style="{{ $background_color ? 'background-color:' . $background_color . ';' : ''}}
+				   {{ $background_image ? 'background:url(' . $background_image . ')  0 no-repeat/cover;' : ''}}">
+			<div class="block-row description" id="description-{$key}">
+					{$description|raw}
+			</div>
+			<div class="block-row timer">
+				<div id="timer-{$key}" style="{{ $timer_color ? 'color:' . $timer_color . ';' : ''}}"></div>
+				<xf:js src="tg/et/et.js">
+					$('#timer-{$key}').EventTimer({
+						endTime: '{$end}',
+						endMessage: '{$end_message|raw}',
+						styleType: {{ $timer_style ? $timer_style : 0}},
+						endJob: function(a)
+						{
+							<xf:if is="{$hide_desc}">
+								$('#description-{$key}').fadeOut();
+							</xf:if>
+						}
+					});
+				</xf:js>
+			</div>
+		</div>
+	</div>
+</div>

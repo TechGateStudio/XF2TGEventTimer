@@ -1,0 +1,85 @@
+<h3 class="block-formSectionHeader">
+	<span class="collapseTrigger collapseTrigger--block" data-xf-click="toggle" data-target="< :up:next">
+		<span class="block-formSectionHeader-aligner">{{ phrase('tg_et_main_options') }}</span>
+	</span>
+</h3>
+<div class="block-body block-body--collapsible">
+	<xf:codeeditorrow name="options[description]" value="{$options.description}"
+		mode="html" data-line-wrapping="true" data-line-numbers="false"
+		class="codeEditor--autoSize codeEditor--proportional"
+		label="{{ phrase('tg_et_event_description') }}"
+		explain="{{ phrase('tg_et_event_description_explain') }}" />
+
+	<xf:codeeditorrow name="options[end_message]" value="{$options.end_message}"
+		mode="html" data-line-wrapping="true" data-line-numbers="false"
+		class="codeEditor--autoSize codeEditor--proportional"
+		label="{{ phrase('tg_et_event_description') }}"
+		explain="{{ phrase('tg_et_end_event_message_explain') }}" />
+	
+	<xf:datetimeinputrow name="options[start]" value="{$options.start}"
+						 label="{{ phrase('tg_et_event_start') }}"/>
+	
+	<xf:datetimeinputrow name="options[end]" value="{$options.end}"
+						 label="{{ phrase('tg_et_event_end') }}"/>
+
+	<xf:checkboxrow>
+		<xf:option name="options[hide_desc]" label="{{ phrase('tg_et_hide_desc_end_event') }}" checked="{$options.hide_desc}" />
+		<xf:option name="options[hide]" label="{{ phrase('tg_et_hide_end_event:') }}" checked="{$options.hide}">
+			<xf:dependent>
+				<xf:numberbox name="options[hide_time]" value="{$options.hide_time}" min="0" />
+			</xf:dependent>
+		</xf:option>
+	</xf:checkboxrow>
+</div>
+
+<h3 class="block-formSectionHeader">
+	<span class="collapseTrigger collapseTrigger--block" data-xf-click="toggle" data-target="< :up:next">
+		<span class="block-formSectionHeader-aligner">{{ phrase('tg_et_view_options') }}</span>
+	</span>
+</h3>
+<div class="block-body block-body--collapsible">
+	<xf:tokeninputrow name="options[users]" value="{$options.users}" href="{{ link('users/find') }}"
+		label="{{ phrase('tg_et_view_next_users') }}" />
+
+	<xf:tokeninputrow name="options[not_users]" value="{$options.not_users}" href="{{ link('users/find') }}"
+		label="{{ phrase('tg_et_not_view_next_users') }}" />
+
+	<xf:selectrow name="options[user_groups]" size="7" multiple="multiple" value="{$options.user_groups}"
+		label="{{ phrase('tg_et_view_next_user_group') }}" >
+		<xf:option value="" selected="!{$options.user_groups}">{{ phrase('(none)') }}</xf:option>
+		<xf:foreach loop="$user_groups" value="$group">
+			<xf:option value="{$group.user_group_id}">{$group.title}</xf:option>
+		</xf:foreach>
+	</xf:selectrow>
+
+	<xf:selectrow name="options[not_user_groups]" size="7" multiple="multiple" value="{$options.not_user_groups}"
+		label="{{ phrase('tg_et_not_view_next_user_group') }}" >
+		<xf:option value="" selected="!{$options.not_user_groups}">{{ phrase('(none)') }}</xf:option>
+		<xf:foreach loop="$user_groups" value="$group">
+			<xf:option value="{$group.user_group_id}">{$group.title}</xf:option>
+		</xf:foreach>
+	</xf:selectrow>
+</div>
+
+<h3 class="block-formSectionHeader">
+	<span class="collapseTrigger collapseTrigger--block" data-xf-click="toggle" data-target="< :up:next">
+		<span class="block-formSectionHeader-aligner">{{ phrase('tg_et_style_options') }}</span>
+	</span>
+</h3>
+<div class="block-body block-body--collapsible">
+	<xf:selectrow name="options[timer_style]" value="{$options.timer_style}"
+		label="{{ phrase('tg_et_timer_styles') }}" >
+		<xf:option value="0">{{ phrase('tg_et_timer_style_one') }}</xf:option>
+		<xf:option value="1">{{ phrase('tg_et_timer_style_two') }}</xf:option>
+	</xf:selectrow>
+
+	<xf:textboxrow name="options[timer_num_color]" label="{{ phrase('tg_et_timer_num_color') }}" 
+		value="{$options.timer_num_color}" />
+	<xf:textboxrow name="options[timer_color]" label="{{ phrase('tg_et_timer_color') }}" 
+		value="{$options.timer_color}" />
+	<xf:textboxrow name="options[background_color]" label="{{ phrase('tg_et_background_color') }}" 
+		value="{$options.background_color}" />
+	<xf:textboxrow name="options[background_image]" label="{{ phrase('tg_et_background_image') }}" 
+		value="{$options.background_image}"
+		explain="{{ phrase('tg_et_background_image_explain') }}" />
+</div>

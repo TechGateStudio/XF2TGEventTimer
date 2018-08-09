@@ -1,0 +1,16 @@
+{
+    "legacy_addon_id": "TG/ET",
+    "title": "[TG] Event Timer",
+    "description": "Countdown to the event.",
+    "version_id": 1010470,
+    "version_string": "1.1.4",
+    "dev": "Spark108",
+    "dev_url": "https://spark108.ru/",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+	"require": {
+		"TG/Core": [1000010, "[TG] Core 1.0.0 Alpha"] 
+	},
+    "icon": "fa-clock-o"
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="tg_et_background_color" version_id="1000070" version_string="1.0.0"><![CDATA[Background color]]></phrase>
+  <phrase title="tg_et_background_image" version_id="1000070" version_string="1.0.0"><![CDATA[Background image]]></phrase>
+  <phrase title="tg_et_background_image_explain" version_id="1000070" version_string="1.0.0"><![CDATA[URL address of the image.]]></phrase>
+  <phrase title="tg_et_end_event_message" version_id="1000070" version_string="1.0.0"><![CDATA[Event end message]]></phrase>
+  <phrase title="tg_et_end_event_message_explain" version_id="1000070" version_string="1.0.0"><![CDATA[Displayed instead of the timer after the end of the event (You can use HTML).]]></phrase>
+  <phrase title="tg_et_event_description" version_id="1000070" version_string="1.0.0"><![CDATA[Event description]]></phrase>
+  <phrase title="tg_et_event_description_explain" version_id="1000070" version_string="1.0.0"><![CDATA[The message displayed above the timer (You can use HTML).]]></phrase>
+  <phrase title="tg_et_event_end" version_id="1000070" version_string="1.0.0"><![CDATA[Event end date]]></phrase>
+  <phrase title="tg_et_event_start" version_id="1010170" version_string="1.1.1"><![CDATA[Event start date]]></phrase>
+  <phrase title="tg_et_hide_desc_end_event" version_id="1000070" version_string="1.0.0"><![CDATA[Hide description at the end of the event]]></phrase>
+  <phrase title="tg_et_hide_end_event" version_id="1000070" version_string="1.0.0"><![CDATA[Hide the widget after the event ends in T seconds]]></phrase>
+  <phrase title="tg_et_hour" version_id="1010170" version_string="1.1.1"><![CDATA[Hour]]></phrase>
+  <phrase title="tg_et_main_options" version_id="1000070" version_string="1.0.0"><![CDATA[Main options]]></phrase>
+  <phrase title="tg_et_minute" version_id="1010170" version_string="1.1.1"><![CDATA[Minute]]></phrase>
+  <phrase title="tg_et_not_view_next_user_group" version_id="1000070" version_string="1.0.0"><![CDATA[Will not be shown to the following user groups]]></phrase>
+  <phrase title="tg_et_not_view_next_users" version_id="1000070" version_string="1.0.0"><![CDATA[Will not be displayed to the following users]]></phrase>
+  <phrase title="tg_et_style_options" version_id="1000070" version_string="1.0.0"><![CDATA[Style options]]></phrase>
+  <phrase title="tg_et_timer_color" version_id="1000070" version_string="1.0.0"><![CDATA[Timer color]]></phrase>
+  <phrase title="tg_et_timer_num_color" version_id="1000070" version_string="1.0.0"><![CDATA[Color of the digits of the timer]]></phrase>
+  <phrase title="tg_et_timer_style_one" version_id="1010170" version_string="1.1.1"><![CDATA[Style 1 (Line)]]></phrase>
+  <phrase title="tg_et_timer_style_two" version_id="1010170" version_string="1.1.1"><![CDATA[Style 2 (Column)]]></phrase>
+  <phrase title="tg_et_timer_styles" version_id="1000070" version_string="1.0.0"><![CDATA[Timer style]]></phrase>
+  <phrase title="tg_et_view_next_user_group" version_id="1000070" version_string="1.0.0"><![CDATA[Will be displayed to the following user groups]]></phrase>
+  <phrase title="tg_et_view_next_users" version_id="1000070" version_string="1.0.0"><![CDATA[Will be displayed to the following users]]></phrase>
+  <phrase title="tg_et_view_options" version_id="1000070" version_string="1.0.0"><![CDATA[View options]]></phrase>
+  <phrase title="widget_def.et_event_timer" version_id="1000070" version_string="1.0.0"><![CDATA[Event Timer]]></phrase>
+  <phrase title="widget_def_desc.et_event_timer" version_id="1000070" version_string="1.0.0"><![CDATA[]]></phrase>
+</phrases>

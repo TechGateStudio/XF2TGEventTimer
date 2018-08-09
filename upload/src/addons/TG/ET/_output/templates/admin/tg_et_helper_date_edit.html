@@ -1,0 +1,32 @@
+<xf:macro name="date_edit" arg-hint="" arg-label="" arg-name="!" arg-date="{{ [] }}">
+	<xf:formrow rowtype="input" label="{$label}" hint="{$hint}">
+		<div class="inputGroup inputGroup--auto">
+			<xf:textbox name="options[{$name}][day]" value="{{ $date.day ?: '01' }}" pattern="\d*" size="4" maxlength="2"
+				placeholder="{{ phrase('day') }}" />
+			<span class="inputGroup-splitter"> . </span>
+			<xf:select name="options[{$name}][month]" value="{{ $date.month ?: 1 }}">
+				<xf:option value="1">{{ phrase('month_1') }}</xf:option>
+				<xf:option value="2">{{ phrase('month_2') }}</xf:option>
+				<xf:option value="3">{{ phrase('month_3') }}</xf:option>
+				<xf:option value="4">{{ phrase('month_4') }}</xf:option>
+				<xf:option value="5">{{ phrase('month_5') }}</xf:option>
+				<xf:option value="6">{{ phrase('month_6') }}</xf:option>
+				<xf:option value="7">{{ phrase('month_7') }}</xf:option>
+				<xf:option value="8">{{ phrase('month_8') }}</xf:option>
+				<xf:option value="9">{{ phrase('month_9') }}</xf:option>
+				<xf:option value="10">{{ phrase('month_10') }}</xf:option>
+				<xf:option value="11">{{ phrase('month_11') }}</xf:option>
+				<xf:option value="12">{{ phrase('month_12') }}</xf:option>
+			</xf:select>
+			<span class="inputGroup-splitter"> . </span>
+			<xf:textbox name="options[{$name}][year]" value="{{ $date.year ?: '2018' }}" pattern="\d*" size="6" maxlength="4"
+				placeholder="{{ phrase('year') }}" />
+			<span class="inputGroup-splitter"> - </span>
+			<xf:textbox name="options[{$name}][hour]" value="{{ $date.hour ?: '00' }}" pattern="\d*" size="6" maxlength="2"
+				placeholder="{{ phrase('tg_et_hour') }}" />
+			<span class="inputGroup-splitter"> : </span>
+			<xf:textbox name="options[{$name}][minute]" value="{{ $date.minute ?: '00' }}" pattern="\d*" size="6" maxlength="2"
+				placeholder="{{ phrase('tg_et_minute') }}" />
+		</div>
+	</xf:formrow>
+</xf:macro>

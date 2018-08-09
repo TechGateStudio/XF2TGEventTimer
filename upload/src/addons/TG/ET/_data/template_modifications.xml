@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="helper_js_global" modification_key="tg_et_add_phrases" execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--XF:JS-->]]></find>
+    <replace><![CDATA[	$0
+	<script>
+	jQuery.extend(XF.phrases, {
+		units_hours: "{{ phrase('units_hours')|escape('js') }}",
+		units_minutes: "{{ phrase('units_minutes')|escape('js') }}",
+		units_seconds: "{{ phrase('units_seconds')|escape('js') }}",
+		units_days: "{{ phrase('units_days')|escape('js') }}"
+	});
+	</script>]]></replace>
+  </modification>
+</template_modifications>

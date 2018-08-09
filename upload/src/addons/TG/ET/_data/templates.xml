@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="admin" title="tg_et_helper_date_edit" version_id="1010470" version_string="1.1.4"><![CDATA[<xf:macro name="date_edit" arg-hint="" arg-label="" arg-name="!" arg-date="{{ [] }}">
+	<xf:formrow rowtype="input" label="{$label}" hint="{$hint}">
+		<div class="inputGroup inputGroup--auto">
+			<xf:textbox name="options[{$name}][day]" value="{{ $date.day ?: '01' }}" pattern="\d*" size="4" maxlength="2"
+				placeholder="{{ phrase('day') }}" />
+			<span class="inputGroup-splitter"> . </span>
+			<xf:select name="options[{$name}][month]" value="{{ $date.month ?: 1 }}">
+				<xf:option value="1">{{ phrase('month_1') }}</xf:option>
+				<xf:option value="2">{{ phrase('month_2') }}</xf:option>
+				<xf:option value="3">{{ phrase('month_3') }}</xf:option>
+				<xf:option value="4">{{ phrase('month_4') }}</xf:option>
+				<xf:option value="5">{{ phrase('month_5') }}</xf:option>
+				<xf:option value="6">{{ phrase('month_6') }}</xf:option>
+				<xf:option value="7">{{ phrase('month_7') }}</xf:option>
+				<xf:option value="8">{{ phrase('month_8') }}</xf:option>
+				<xf:option value="9">{{ phrase('month_9') }}</xf:option>
+				<xf:option value="10">{{ phrase('month_10') }}</xf:option>
+				<xf:option value="11">{{ phrase('month_11') }}</xf:option>
+				<xf:option value="12">{{ phrase('month_12') }}</xf:option>
+			</xf:select>
+			<span class="inputGroup-splitter"> . </span>
+			<xf:textbox name="options[{$name}][year]" value="{{ $date.year ?: '2018' }}" pattern="\d*" size="6" maxlength="4"
+				placeholder="{{ phrase('year') }}" />
+			<span class="inputGroup-splitter"> - </span>
+			<xf:textbox name="options[{$name}][hour]" value="{{ $date.hour ?: '00' }}" pattern="\d*" size="6" maxlength="2"
+				placeholder="{{ phrase('tg_et_hour') }}" />
+			<span class="inputGroup-splitter"> : </span>
+			<xf:textbox name="options[{$name}][minute]" value="{{ $date.minute ?: '00' }}" pattern="\d*" size="6" maxlength="2"
+				placeholder="{{ phrase('tg_et_minute') }}" />
+		</div>
+	</xf:formrow>
+</xf:macro>]]></template>
+  <template type="admin" title="widget_def_options_et_event_timer" version_id="1010470" version_string="1.1.4"><![CDATA[<h3 class="block-formSectionHeader">
+	<span class="collapseTrigger collapseTrigger--block" data-xf-click="toggle" data-target="< :up:next">
+		<span class="block-formSectionHeader-aligner">{{ phrase('tg_et_main_options') }}</span>
+	</span>
+</h3>
+<div class="block-body block-body--collapsible">
+	<xf:codeeditorrow name="options[description]" value="{$options.description}"
+		mode="html" data-line-wrapping="true" data-line-numbers="false"
+		class="codeEditor--autoSize codeEditor--proportional"
+		label="{{ phrase('tg_et_event_description') }}"
+		explain="{{ phrase('tg_et_event_description_explain') }}" />
+
+	<xf:codeeditorrow name="options[end_message]" value="{$options.end_message}"
+		mode="html" data-line-wrapping="true" data-line-numbers="false"
+		class="codeEditor--autoSize codeEditor--proportional"
+		label="{{ phrase('tg_et_event_description') }}"
+		explain="{{ phrase('tg_et_end_event_message_explain') }}" />
+	
+	<xf:datetimeinputrow name="options[start]" value="{$options.start}"
+						 label="{{ phrase('tg_et_event_start') }}"/>
+	
+	<xf:datetimeinputrow name="options[end]" value="{$options.end}"
+						 label="{{ phrase('tg_et_event_end') }}"/>
+
+	<xf:checkboxrow>
+		<xf:option name="options[hide_desc]" label="{{ phrase('tg_et_hide_desc_end_event') }}" checked="{$options.hide_desc}" />
+		<xf:option name="options[hide]" label="{{ phrase('tg_et_hide_end_event:') }}" checked="{$options.hide}">
+			<xf:dependent>
+				<xf:numberbox name="options[hide_time]" value="{$options.hide_time}" min="0" />
+			</xf:dependent>
+		</xf:option>
+	</xf:checkboxrow>
+</div>
+
+<h3 class="block-formSectionHeader">
+	<span class="collapseTrigger collapseTrigger--block" data-xf-click="toggle" data-target="< :up:next">
+		<span class="block-formSectionHeader-aligner">{{ phrase('tg_et_view_options') }}</span>
+	</span>
+</h3>
+<div class="block-body block-body--collapsible">
+	<xf:tokeninputrow name="options[users]" value="{$options.users}" href="{{ link('users/find') }}"
+		label="{{ phrase('tg_et_view_next_users') }}" />
+
+	<xf:tokeninputrow name="options[not_users]" value="{$options.not_users}" href="{{ link('users/find') }}"
+		label="{{ phrase('tg_et_not_view_next_users') }}" />
+
+	<xf:selectrow name="options[user_groups]" size="7" multiple="multiple" value="{$options.user_groups}"
+		label="{{ phrase('tg_et_view_next_user_group') }}" >
+		<xf:option value="" selected="!{$options.user_groups}">{{ phrase('(none)') }}</xf:option>
+		<xf:foreach loop="$user_groups" value="$group">
+			<xf:option value="{$group.user_group_id}">{$group.title}</xf:option>
+		</xf:foreach>
+	</xf:selectrow>
+
+	<xf:selectrow name="options[not_user_groups]" size="7" multiple="multiple" value="{$options.not_user_groups}"
+		label="{{ phrase('tg_et_not_view_next_user_group') }}" >
+		<xf:option value="" selected="!{$options.not_user_groups}">{{ phrase('(none)') }}</xf:option>
+		<xf:foreach loop="$user_groups" value="$group">
+			<xf:option value="{$group.user_group_id}">{$group.title}</xf:option>
+		</xf:foreach>
+	</xf:selectrow>
+</div>
+
+<h3 class="block-formSectionHeader">
+	<span class="collapseTrigger collapseTrigger--block" data-xf-click="toggle" data-target="< :up:next">
+		<span class="block-formSectionHeader-aligner">{{ phrase('tg_et_style_options') }}</span>
+	</span>
+</h3>
+<div class="block-body block-body--collapsible">
+	<xf:selectrow name="options[timer_style]" value="{$options.timer_style}"
+		label="{{ phrase('tg_et_timer_styles') }}" >
+		<xf:option value="0">{{ phrase('tg_et_timer_style_one') }}</xf:option>
+		<xf:option value="1">{{ phrase('tg_et_timer_style_two') }}</xf:option>
+	</xf:selectrow>
+
+	<xf:textboxrow name="options[timer_num_color]" label="{{ phrase('tg_et_timer_num_color') }}" 
+		value="{$options.timer_num_color}" />
+	<xf:textboxrow name="options[timer_color]" label="{{ phrase('tg_et_timer_color') }}" 
+		value="{$options.timer_color}" />
+	<xf:textboxrow name="options[background_color]" label="{{ phrase('tg_et_background_color') }}" 
+		value="{$options.background_color}" />
+	<xf:textboxrow name="options[background_image]" label="{{ phrase('tg_et_background_image') }}" 
+		value="{$options.background_image}"
+		explain="{{ phrase('tg_et_background_image_explain') }}" />
+</div>]]></template>
+  <template type="public" title="widget_tg_et_eventTimer" version_id="1010470" version_string="1.1.4"><![CDATA[<xf:css src="widget_tg_et_eventTimer.less" />
+
+<div class="block">
+	<div class="block-container">
+		<div class="block-body et" 
+			style="{{ $background_color ? 'background-color:' . $background_color . ';' : ''}}
+				   {{ $background_image ? 'background:url(' . $background_image . ')  0 no-repeat/cover;' : ''}}">
+			<div class="block-row description" id="description-{$key}">
+					{$description|raw}
+			</div>
+			<div class="block-row timer">
+				<div id="timer-{$key}" style="{{ $timer_color ? 'color:' . $timer_color . ';' : ''}}"></div>
+				<xf:js src="tg/et/et.js">
+					$('#timer-{$key}').EventTimer({
+						endTime: '{$end}',
+						endMessage: '{$end_message|raw}',
+						styleType: {{ $timer_style ? $timer_style : 0}},
+						endJob: function(a)
+						{
+							<xf:if is="{$hide_desc}">
+								$('#description-{$key}').fadeOut();
+							</xf:if>
+						}
+					});
+				</xf:js>
+			</div>
+		</div>
+	</div>
+</div>]]></template>
+  <template type="public" title="widget_tg_et_eventTimer.less" version_id="1010070" version_string="1.1.0"><![CDATA[.et {
+	.description {
+		text-align: center;
+		font-size: 16px;
+	}
+	.timer {
+    	color: #5050f1;
+   		font-weight: 600;
+		text-align: center;
+		
+		.pair {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			margin-right: -5px;
+			margin-bottom: -5px;
+
+			dl {
+				margin: 0px 5px 5px 5px;
+				display: inline-table;
+
+				& > dt {
+					display: table-row;
+					font-size: 290%;
+					padding: 0;
+					margin: 0;
+				}
+				& > dd {
+					text-align: center;
+					display: table-row;
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+	}
+}]]></template>
+</templates>
